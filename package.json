@@ -1,0 +1,28 @@
+{
+  "name": "react-redux-ssr-cognizant",
+  "version": "1.0.0",
+  "description": "A Repo to make the simplest React-Redux-Server-Side-Rendering async app. A Scaffolding that is aimed at helping devs to set up a basic setup for a react-redux app.",
+  "main": "src/server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashiuilab/react-redux-ssr-boilerplate.git"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "SSR",
+    "Server",
+    "Side",
+    "Rendering",
+    "Boilerplate"
+  ],
+  "author": "Shashidhar Reddy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shashiuilab/react-redux-ssr-boilerplate/issues"
+  },
+  "homepage": "https://github.com/shashiuilab/react-redux-ssr-boilerplate#readme"
+}
