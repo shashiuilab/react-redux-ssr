@@ -1,22 +1,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import App from '../containers/App';
-import Home from '../containers/Home';
-import About from '../containers/About';
-import NotFound from '../containers/NotFound';
-import { getHomeData } from '../redux/actions/home';
-import { getAboutData } from '../redux/actions/about';
+import App from '../components/app/App';
+import Home from '../components/home/Home';
+import About from '../components/about/About';
+import NotFound from '../components/notFound/NotFound';
 
 export const routes = [{
   path: '/',
   exact: true,
   component: Home,
-  loadData: () => getHomeData()
 }, {
   path: '/about',
   exact: true,
-  component: About,
-  loadData: () => getAboutData()
+  component: About
 }, {
   component: NotFound
 }];

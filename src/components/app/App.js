@@ -6,14 +6,12 @@ import styles from './App.scss';
 export default class App extends Component {
   render() {
     return (
-      <div className={styles.App}>
-        <div className={styles.TopBar}>
-          <Link className={styles.Link} to="/">Home</Link>
-          <Link className={styles.Link} to="/about">About</Link>
+      <>
+        <div className={styles.App}>
+          {this.props.children}
+          <div className={styles.Footer}>Shashidhar@CTS - MIT License</div>
         </div>
-        {this.props.children}
-        <div className={styles.Footer}>Shashidhar@CTS - MIT License</div>
-      </div>
+      </>
     );
   }
 }

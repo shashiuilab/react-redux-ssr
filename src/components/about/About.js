@@ -1,33 +1,23 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './About.scss';
+import Header from '../header/Header';
 
-export default class About extends Component {
-  componentDidMount() {
-    // only fetch the data if there is no data
-    if (!this.props.data) this.props.getData();
-  }
-
-  render() {
-    const { data } = this.props;
-    if (!data) return 'Loading async data...';
-
+const About = () => {
     return (
-      <div className={styles.About}>
-        <h1>About page</h1>
-        <p>Async Text:  {data.text}</p>
-      </div>
+      <>
+        <Header />
+        <div className={styles.About}>
+          <h1>About page</h1>
+        </div>
+      </>
     );
-  }
 }
 
 About.propTypes = {
-  data: PropTypes.shape({
-    text: PropTypes.string
-  }),
-  getData: PropTypes.func.isRequired
 };
 
 About.defaultProps = {
-  data: null
 };
+
+export default About;

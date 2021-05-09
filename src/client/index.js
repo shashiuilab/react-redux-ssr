@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Router from '../common/routes';
 import createReduxStore from '../common/createReduxStore';
+import "regenerator-runtime/runtime";
 
 // Grab the state from a global variable injected into the server-generated HTML
 const preloadedState = window.__PRELOADED_STATE__; // eslint-disable-line no-underscore-dangle

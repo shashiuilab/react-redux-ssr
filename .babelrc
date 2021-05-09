@@ -9,7 +9,8 @@
               "preprocessCss": "./loaders/sass-loader.js",
               "generateScopedName": "./loaders/scope-name.js",
               "extensions": [".scss", ".css"]
-            }
+            },
+            "@babel/transform-runtime"
           ]
         ]
       }

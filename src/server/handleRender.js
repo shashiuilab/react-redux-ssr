@@ -17,7 +17,6 @@ export default function handleRender(req, res) {
   // use `some` to imitate `<Switch>` behavior of selecting only the first to match
   routes.some((route) => {
     matchedRoute = matchPath(req.path, route);
-    if (matchedRoute && route.loadData) promises.push(store.dispatch(route.loadData()));
     return matchedRoute;
   });
 

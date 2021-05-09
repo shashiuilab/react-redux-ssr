@@ -1,33 +1,29 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchData } from '../../store/actions/fetchData';
 import styles from './Home.scss';
+import Header from '../header/Header';
 
-export default class Home extends Component {
-  componentDidMount() {
-    // only fetch data if it does not already exist
-    if (!this.props.data) this.props.getData();
-  }
-
-  render() {
-    const { data } = this.props;
-    if (!data) return 'Loading async data...';
-
+const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [])
     return (
-      <div className={styles.Home}>
-        <h1>Home page</h1>
-        <p>Async Text:  {data.text}</p>
-      </div>
+      <>
+        <Header />
+        <div className={styles.Home}>
+          <h1>Home page</h1>
+        </div>
+      </>
     );
-  }
 }
 
+export default Home;
+
 Home.propTypes = {
-  data: PropTypes.shape({
-    text: PropTypes.string
-  }),
-  getData: PropTypes.func.isRequired
 };
 
 Home.defaultProps = {
-  data: null
 };
